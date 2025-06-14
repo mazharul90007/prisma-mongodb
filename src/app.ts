@@ -12,8 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 // Health check route
-app.get("/health", (req: Request, res: Response) => {
-  res.json({ status: "ok", message: "Server is running" });
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello World");
 });
 
 // Error handling middleware
